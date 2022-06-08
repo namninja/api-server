@@ -4,7 +4,6 @@
   "description": "api server for datafeeds",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nam Ninja",
