@@ -5,6 +5,7 @@ const postRoutes = require('./posts');
 const todoRoutes = require('./todos');
 const photoRoutes = require('./photos');
 const albumRoutes = require('./albums');
+const productRoutes = require('./products');
 
 const appRouter = (app, fs) => {
     // we've added in a default route here that handles empty routes
@@ -20,6 +21,7 @@ const appRouter = (app, fs) => {
   todoRoutes(app, fs);
   photoRoutes(app, fs);
   albumRoutes(app, fs);
+  productRoutes(app, fs);
 };
 
 module.exports = appRouter;
