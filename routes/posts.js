@@ -11,6 +11,7 @@ const postRoutes = (app, fs) => {
         if (err) {
           throw err;
         }
+       
         if (!req.query) {
           res.send(JSON.parse(data));
         } else {
@@ -19,6 +20,7 @@ const postRoutes = (app, fs) => {
               return obj.userId == req.query.userId
             })
           }
+          
           res.send(filteredData);
         }
         
