@@ -1,9 +1,9 @@
-const jobRecommendationRoutes = (app, fs) => {
+const jobRoutes = (app, fs) => {
     // variables
-    const dataPath = './data/job-recomendations.json';
+    const dataPath = './data/jobs.json';
   
     // READ
-    app.get('/job-recommendations', (req, res) => {
+    app.get('/jobs', (req, res) => {
       fs.readFile(dataPath, 'utf8', (err, data) => {
         if (err) {
           throw err;
@@ -14,4 +14,4 @@ const jobRecommendationRoutes = (app, fs) => {
     });
   };
   
-  module.exports = jobRecommendationRoutes;
+  module.exports = jobRoutes;

@@ -1,449 +1,225 @@
 {
-
     "_links": {
-
         "first": {
-
             "href": "/v1/dice/jobs/search/profile?page=1"
-
         },
-
         "last": {
-
             "href": "/v1/dice/jobs/search/profile?page=112"
-
         },
-
         "next": {
-
             "href": "/v1/dice/jobs/search/profile?page=2"
-
         },
-
         "prev": {
-
             "href": "/v1/dice/jobs/search/profile?page=1"
-
         },
-
         "self": {
-
             "href": "/v1/dice/jobs/search/profile"
-
         }
-
     },
-
     "data": [
-
         {
-
             "clientBrandId": "10123373",
-
             "companyLogoUrl": "//assets.dice.com/external/images/empLogos/9219eb8ac30a492ac535766fd5715e76.gif",
-
             "companyName": "SGS Consulting",
-
             "companyPageUrl": "https://www.dice.com/company/10123373",
-
             "detailsPageUrl": "https://www.dice.com/jobs/detail/d1fe902fd2be1dd7abe523c688a01801",
-
             "easyApply": true,
-
             "employerType": "Direct Hire",
-
             "employmentType": "Contract",
-
             "id": "d1fe902fd2be1dd7abe523c688a01801",
-
             "isRemote": true,
-
             "jobId": "d1fe902fd2be1dd7abe523c688a01801",
-
             "postedDate": "2022-09-26T21:28:11Z",
-
             "salary": "$85 - $95",
-
             "score": 488.66656,
-
             "summary": "Title: Senior Staff Engineer, Product Location: 100% remote Job Duration: 36 Months (Possible Extension) Typically, this person will work from home, but there are times that going into the office would be needed.  Glider test to be taken at point of interview request: 36429466 \u2022 Design software and implement functionality in C/C++ by analyzing requirements. \u2022 Support product testing, debug, and integrate into the larger systems. \u2022 Develop an understanding of GNSS concepts and fundamentals throug",
-
             "title": "Senior Staff Engineer",
-
             "workFromHomeAvailability": "FALSE"
-
         },
-
         {
-
             "clientBrandId": "91094828",
-
             "companyLogoUrl": "//assets.dice.com/external/images/empLogos/9397e63f0db3b0a2013ad61cd15f6d1a.jpg",
-
             "companyName": "MAXAR Technologies",
-
             "companyPageUrl": "https://www.dice.com/company/91094828",
-
             "detailsPageUrl": "https://www.dice.com/job-detail/6bc71ed0-3b71-46ad-acbe-7831ddd8d30c",
-
             "easyApply": false,
-
             "employerType": "Direct Hire",
-
             "employmentType": "Full-time",
-
             "id": "ab099a28450bd6a0b148bfc2e0126c9a",
-
             "isRemote": false,
-
             "jobId": "ab099a28450bd6a0b148bfc2e0126c9a",
-
             "jobLocation": {
-
                 "displayName": "Westminster, CO, USA"
-
             },
-
             "postedDate": "2022-10-11T20:03:21Z",
-
             "score": 386.83328,
-
             "summary": "Please review the job details below. Senior Staff Software Engineer At Maxar we unlock the promise of space to help governments and businesses solve problems on Earth and beyond. We monitor global change, deliver broadband communications and advance space operations with capabilities in Space Infrastructure and Earth Intelligence. Want to play a part in humankind's return to the moon, contribute to missions in support of national security, p rovide expertise used in the latest app technology , o",
-
             "title": "Senior Staff Software Engineer",
-
             "workFromHomeAvailability": "TRUE"
-
         },
-
         {
-
             "clientBrandId": "91094828",
-
             "companyLogoUrl": "//assets.dice.com/external/images/empLogos/9397e63f0db3b0a2013ad61cd15f6d1a.jpg",
-
             "companyName": "MAXAR Technologies",
-
             "companyPageUrl": "https://www.dice.com/company/91094828",
-
             "detailsPageUrl": "https://www.dice.com/job-detail/50ca92fd-8d9d-4761-b41e-7601a3e2f7e4",
-
             "easyApply": false,
-
             "employerType": "Direct Hire",
-
             "employmentType": "Full-time",
-
             "id": "cde68000853a462566152bf919a8ffc0",
-
             "isRemote": true,
-
             "jobId": "cde68000853a462566152bf919a8ffc0",
-
             "postedDate": "2022-09-14T08:04:59Z",
-
             "score": 341.2364,
-
             "summary": "Please review the job details below.  Are you passionate about challenging software problems? Maxar is looking for a Senior Staff Software Engineer to join our Space Software group. You will join the Ground Software team responsible for designing, developing, deploying, and maintaining telemetry and commanding products. The software you build will support engineering teams and mission operations for multiple satellites, including a core component of returning humans to the Moon. Come be part of ",
-
             "title": "Senior Staff Software Development Engineer",
-
             "workFromHomeAvailability": "TRUE"
-
         },
-
         {
-
             "clientBrandId": "90312222",
-
             "companyLogoUrl": "//assets.dice.com/external/images/empLogos/419d960f3221f6156c29855d0858d269.png",
-
             "companyName": "DISH ",
-
             "companyPageUrl": "https://www.dice.com/company/90312222",
-
             "detailsPageUrl": "https://www.dice.com/jobs/detail/fd8271cc79c40a2696939a7e9dfe43ef",
-
             "easyApply": true,
-
             "employerType": "Direct Hire",
-
             "employmentType": "Full-time",
-
             "id": "fd8271cc79c40a2696939a7e9dfe43ef",
-
             "isRemote": false,
-
             "jobId": "fd8271cc79c40a2696939a7e9dfe43ef",
-
             "jobLocation": {
-
                 "displayName": "Littleton, CO, USA"
-
             },
-
             "postedDate": "2022-10-18T02:37:27Z",
-
             "salary": "$100,100 - $143,000",
-
             "score": 341.078,
-
             "summary": "Job Duties and Responsibilities We are seeking an enthusiastic, tech-savvy, business-minded engineer with network and server-side experience from the wireless and IT industry for the role of Staff Technical Product Engineer to join our Value-added Services Product Development team. You will report to the Head of VAS Product Development.  In this role you will be responsible for evaluating, designing, and overseeing the implementation of innovative wireless services that create a better customer ",
-
             "title": "Staff Technical Product Engineer",
-
             "workFromHomeAvailability": "FALSE"
-
         },
-
         {
-
             "clientBrandId": "90312222",
-
             "companyLogoUrl": "//assets.dice.com/external/images/empLogos/419d960f3221f6156c29855d0858d269.png",
-
             "companyName": "DISH ",
-
             "companyPageUrl": "https://www.dice.com/company/90312222",
-
             "detailsPageUrl": "https://www.dice.com/jobs/detail/f553da7d1cbde6ca31aefeac80b0e22e",
-
             "easyApply": true,
-
             "employerType": "Direct Hire",
-
             "employmentType": "Full-time",
-
             "id": "f553da7d1cbde6ca31aefeac80b0e22e",
-
             "isRemote": false,
-
             "jobId": "f553da7d1cbde6ca31aefeac80b0e22e",
-
             "jobLocation": {
-
                 "displayName": "Littleton, CO, USA"
-
             },
-
             "postedDate": "2022-10-12T18:24:59Z",
-
             "salary": "$122,550 - $165,450",
-
             "score": 339.0259,
-
             "summary": "Job Duties and Responsibilities As a Staff Engineer at DISH you must be a natural problem solver, you think the best answer is the simplest and most elegant. We are looking for a Technical Support Engineer to provide enterprise-level assistance to our customers and monitor applications deployed in AWS cloud environments. You will diagnose and troubleshoot software and hardware problems and help our customers in order provisioning. You will use email and chat applications to give clients quick an",
-
             "title": "Staff Engineer - DevOps & Support",
-
             "workFromHomeAvailability": "FALSE"
-
         },
-
         {
-
             "clientBrandId": "91099756",
-
             "companyLogoUrl": "//assets.dice.com/external/images/empLogos/a3ab18bc01214f3322737fcefcb004c8.png",
-
             "companyName": "Augusta Hitech Soft Solutions LLC",
-
             "companyPageUrl": "https://www.dice.com/company/91099756",
-
             "detailsPageUrl": "https://www.dice.com/jobs/detail/87148a5d12689a2cbff9d0434cbc5b6c",
-
             "easyApply": true,
-
             "employerType": "Direct Hire",
-
             "employmentType": "Full-time",
-
             "id": "87148a5d12689a2cbff9d0434cbc5b6c",
-
             "isRemote": true,
-
             "jobId": "87148a5d12689a2cbff9d0434cbc5b6c",
-
             "postedDate": "2022-10-04T21:50:21Z",
-
             "salary": "$160,000 - $170,000",
-
             "score": 330.0671,
-
             "summary": "Job Role - Software Engineer Senior Principal (AWS, Javascript, Java) Location - Remote Duration - 12+ months   SUMMARY: This position will be responsible for planning, coordinating, and supervising activities related to the enterprise's design, development, and implementation of application solutions. Lead and direct solution design for large, highly complex applications requiring skill across multiple technical domains and disciplines with system-wide impact that integrate across the organizat",
-
             "title": "Software Engineer Senior Principal",
-
             "workFromHomeAvailability": "FALSE"
-
         },
-
         {
-
             "clientBrandId": "10115307",
-
             "companyLogoUrl": "//assets.dice.com/external/images/empLogos/3a9ff27c7c6fbd19e5216264dccc33ff.jpg",
-
             "companyName": "American Cybersystems, Inc.",
-
             "companyPageUrl": "https://www.dice.com/company/10115307",
-
             "detailsPageUrl": "https://www.dice.com/jobs/detail/4f8e873a368906f913d6b01acc819dc2",
-
             "easyApply": true,
-
             "employerType": "Direct Hire",
-
             "employmentType": "Contract",
-
             "id": "4f8e873a368906f913d6b01acc819dc2",
-
             "isRemote": true,
-
             "jobId": "4f8e873a368906f913d6b01acc819dc2",
-
             "postedDate": "2022-10-11T20:29:47Z",
-
             "salary": "Depends on Experience",
-
             "score": 319.32074,
-
             "summary": "ACS Solutions has an immediate need for a Sr. Staff Analog/Mixed-Signal ASIC Engineer (Remote) with experience in the Engineering Industry.  This is a 3-6 months contract opportunity. Our client is a leading Engineering company. Please review the job description below:  Top Skills: Analog/Mixed Signal ASIC Design LIDAR IC design ADAS System DAC and ADC design   Key Responsibilities: Involved in architectural development for Scanned Beam LIDAR Design, build, and test prototype solutions Design an",
-
             "title": "Sr. Staff Analog/Mixed-Signal ASIC Engineer (Remote)",
-
             "workFromHomeAvailability": "FALSE"
-
         },
-
         {
-
             "clientBrandId": "91094828",
-
             "companyLogoUrl": "//assets.dice.com/external/images/empLogos/9397e63f0db3b0a2013ad61cd15f6d1a.jpg",
-
             "companyName": "MAXAR Technologies",
-
             "companyPageUrl": "https://www.dice.com/company/91094828",
-
             "detailsPageUrl": "https://www.dice.com/job-detail/0300195d-383a-4b6a-b0fd-1689f61ad0ea",
-
             "easyApply": false,
-
             "employerType": "Direct Hire",
-
             "employmentType": "Full-time",
-
             "id": "b2d18fd5c2a0b2f56f6b2bfc4b395686",
-
             "isRemote": true,
-
             "jobId": "b2d18fd5c2a0b2f56f6b2bfc4b395686",
-
             "postedDate": "2022-08-23T08:05:21Z",
-
             "score": 312.61548,
-
             "summary": "Please review the job details below.  At Maxar, our next generation spacecraft range from Earth observation to interplanetary missions, including NASA's Artemis Program Lunar Gateway Power and Propulsion Element (PPE). Maxar is currently seeking an experienced Staff FPGA Design Engineer to join our growing Space Program Delivery team. This position provides an opportunity to participate in fast-paced iterative Avionics Hardware developments for Command & Data Handling systems, with an emphasis i",
-
             "title": "Senior Staff FPGA Design Engineer",
-
             "workFromHomeAvailability": "TRUE"
-
         },
-
         {
-
             "clientBrandId": "91126851",
-
             "companyLogoUrl": "//assets.dice.com/external/images/empLogos/05d2fdd2cb307b9ae0ba1e3188951ef0.png",
-
             "companyName": "Crisis Text Line",
-
             "companyPageUrl": "https://www.dice.com/company/91126851",
-
             "detailsPageUrl": "https://www.dice.com/jobs/detail/90e5d1b9a05d5972fb4970c88ce7a23f",
-
             "easyApply": true,
-
             "employerType": "Direct Hire",
-
             "employmentType": "Full-time",
-
             "id": "90e5d1b9a05d5972fb4970c88ce7a23f",
-
             "isRemote": true,
-
             "jobId": "90e5d1b9a05d5972fb4970c88ce7a23f",
-
             "postedDate": "2022-10-12T20:21:53Z",
-
             "salary": "Depends on Experience",
-
             "score": 305.68738,
-
             "summary": "Role Crisis Text Line's software engineers develop the next-generation data platform that changes how millions of humans connect with volunteer crisis counselors, our clinical staff and the interaction with one another. Our platform needs to handle information at a massive scale and extend well beyond SMS as a channel. We're looking for engineers who bring fresh ideas from all areas, including information processing, distributed computing, large-scale system design, networking and data storage, ",
-
             "title": "Staff DevOps Engineer",
-
             "workFromHomeAvailability": "FALSE"
-
         },
-
         {
-
             "clientBrandId": "91136250",
-
             "companyLogoUrl": "//assets.dice.com/external/images/empLogos/71104112e63c87bbf351101f0fea0dec.png",
-
             "companyName": "Pearson",
-
             "companyPageUrl": "https://www.dice.com/company/91136250",
-
             "detailsPageUrl": "https://www.dice.com/jobs/detail/1de44b75a1c5b0a02812f001258b74c5",
-
             "easyApply": true,
-
             "employerType": "Direct Hire",
-
             "employmentType": "Full-time",
-
             "id": "1de44b75a1c5b0a02812f001258b74c5",
-
             "isRemote": true,
-
             "jobId": "1de44b75a1c5b0a02812f001258b74c5",
-
             "postedDate": "2022-10-17T20:43:14Z",
-
             "salary": "$90,000 - $115,000",
-
             "score": 303.862,
-
             "summary": "The Senior Software Engineer is responsible for analysis, design, implementation, and unit testing to produce high-quality code for a project team responsible for supporting a number of cutting edge assessment technology platforms. They will use industry best practices while working in a team of high-performing professionals. They are also responsible for maintaining and supporting mission-critical applications as necessary. This requisition is part of the Pearson/MZD team, which develops innova",
-
             "title": "Senior Software Engineer",
-
             "workFromHomeAvailability": "FALSE"
-
         }
-
     ],
-
     "meta": {
-
         "currentPage": 1,
-
         "includeRemote": false,
-
         "pageCount": 112,
-
         "pageSize": 10,
-
         "recommendedSearches": {},
-
         "totalResults": 1114
-
     }
-
 }

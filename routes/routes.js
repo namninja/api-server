@@ -1,5 +1,6 @@
 // load up our shiny new route for users
 const userRoutes = require('./users');
+const jobRoutes = require('./jobs');
 const commentRoutes = require('./comments');
 const postRoutes = require('./posts');
 const todoRoutes = require('./todos');
@@ -22,6 +23,7 @@ const appRouter = (app, fs) => {
   photoRoutes(app, fs);
   albumRoutes(app, fs);
   productRoutes(app, fs);
+  jobRoutes(app, fs);
 };
 
 module.exports = appRouter;
