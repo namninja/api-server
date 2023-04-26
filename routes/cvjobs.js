@@ -16,7 +16,7 @@ const cvjobRoutes = (app, fs) => {
           res.send(JSON.parse(data));
         } else {
           let filteredData = {
-            "jobs":User.jobs.filter(function (obj) {
+            "cvjobs":User.cvjobs.filter(function (obj) {
               return obj.userId == req.query.userId
             })
           }
