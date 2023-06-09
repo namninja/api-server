@@ -8,7 +8,7 @@ const photoRoutes = require('./photos');
 const albumRoutes = require('./albums');
 const productRoutes = require('./products');
 const cvjobRoutes = require('./cvjobs');
-const jwtRoutes = require('./jwt');
+const mobileJwtRoutes = require('./mobilejwt');
 //const client = require('node-iterable-api').create('99a3883fd905413f8ecc4acda85f9a45')
 
 // let iterableClient = {
@@ -78,7 +78,7 @@ const appRouter = (app, fs) => {
   jobRoutes(app, fs);
   cvjobRoutes(app, fs);
   jwtRoutes(app, fs);
-
+  mobileJwtRoutes(app, fs);
 };
 
 module.exports = appRouter;
