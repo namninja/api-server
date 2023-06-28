@@ -7,13 +7,13 @@ const mobileJwtRoutes = (app, fs) => {
     app.post('/mobilejwt', (req, res) => {
         console.log(req)
         var token = jwt.sign({
-            exp: 1687982207 + 300000,
+            exp: 1687982207 + 7689600,
             iat: 1687982207, 
             email: req.body.email
         }, "80774a550ee940cb02cbf6598c942b733ac415cc43169fdde255d9229283046428d5da1b29e71d23d7880def66108a7d07a04fad8e35e47dd72e5a8e085a4a2a");
   
-        // res.status(201).json(token);
-        res.status(201).json("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTMyNTQ0MzEsImVtYWlsIjoibmFtLm5nbytkcm9pZDRAaXRlcmFibGUuY29tIiwiaWF0IjoxNjg3OTgyMjA3fQ.YHOu1fweJI1F3OhA_tLQewxuSG5-Qv2O7iIhyTkSV-g")
+        res.status(201).json(token);
+        //res.status(201).json({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTMyNTQ0MzEsImVtYWlsIjoibmFtLm5nbytkcm9pZDRAaXRlcmFibGUuY29tIiwiaWF0IjoxNjg3OTgyMjA3fQ.YHOu1fweJI1F3OhA_tLQewxuSG5-Qv2O7iIhyTkSV-g"})
       });
     
   };
