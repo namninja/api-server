@@ -1,0 +1,226 @@
+{
+  "data": {
+    "viewer": {
+      "__typename": "AuthenticatedViewer",
+      "feed": {
+        "__typename": "Feed",
+        "id": "1267",
+        "slug": "email-promo-feed",
+        "title": null,
+        "subtitle": null,
+        "hero": null,
+        "analyticsImpressionPayload": {
+          "__typename": "AnalyticsPayload",
+          "eventName": "",
+          "payload": ""
+        },
+        "isDLS": true,
+        "feedData": {
+          "reward_display_text": "Cash Back"
+        },
+        "viewEvent": {
+          "__typename": "ViewEvent",
+          "eventName": "Visit Other Feed",
+          "holisticEventName": "Feed Viewed",
+          "payloadId": "7810c596-c99c-0fcf-4693-40bb8f733922",
+          "holisticEventSchemaId": 665
+        },
+        "actionEvents": [],
+        "templateType": "Generic",
+        "topics": {
+          "__typename": "TopicConnection",
+          "pageInfo": {
+            "__typename": "PageInfo",
+            "hasNextPage": false,
+            "hasPreviousPage": false,
+            "startCursor": "RmVlZFRvcGljLTEtMQ==",
+            "endCursor": "RmVlZFRvcGljLTEtMQ=="
+          },
+          "edges": [
+            {
+              "__typename": "TopicEdge",
+              "node": {
+                "__typename": "DesignSystemTopic",
+                "id": "57819",
+                "template": "GENERIC",
+                "expiration": null,
+                "topicData": {
+                  "inverseBackground": false,
+                  "layoutTemplate": "dr_mediahero_v2_layout",
+                  "primaryType": "Media",
+                  "reduceBottomSpacing": false
+                },
+                "hideTopBorder": false,
+                "hideBottomBorder": false,
+                "items": {
+                  "__typename": "DesignSystemItemConnection",
+                  "pageInfo": {
+                    "__typename": "PageInfo",
+                    "hasNextPage": false,
+                    "hasPreviousPage": false,
+                    "startCursor": "dG9waWM1NzgxOS0xLTA=",
+                    "endCursor": "dG9waWM1NzgxOS0xLTA="
+                  },
+                  "edges": [
+                    {
+                      "__typename": "DesignSystemItemEdge",
+                      "node": {
+                        "__typename": "DesignSystemItem",
+                        "id": "17087",
+                        "itemData": {
+                          "ctabutton_text": "See Stores",
+                          "displayMode": "light",
+                          "id": "17087",
+                          "media_image_alttext": "Save with Rakuten coupons and Cash Back",
+                          "media_image_ctaurl": "https://go.rakuten.com/open-app?$deeplink_path=us%2Ffeed%2Fpromotion&$fallback_url=https://www.rakuten.com/f/promotion",
+                          "media_image_imageurl": "https://static.rakuten.com/img/media/dls/override/1694037389446/cta_media_image-2.png",
+                          "renderType": "STATIC",
+                          "template": "cta_media_image_v1"
+                        },
+                        "viewEvent": {
+                          "__typename": "ViewEvent",
+                          "eventName": "View Tile",
+                          "holisticEventName": "Tile Viewed",
+                          "payloadId": "0b6d2b03-d16d-cda0-faaf-91b5081c64b6",
+                          "holisticEventSchemaId": 670
+                        },
+                        "actionEvents": [
+                          {
+                            "__typename": "ActionEvent",
+                            "key": "media_image_ctaurl",
+                            "eventName": "Click Tile",
+                            "holisticEventName": "Tile Clicked",
+                            "payloadId": "0b6d2b03-d16d-cda0-faaf-91b5081c64b6",
+                            "holisticEventSchemaId": 670
+                          }
+                        ],
+                        "payloads": [
+                          {
+                            "__typename": "Payload",
+                            "id": "0b6d2b03-d16d-cda0-faaf-91b5081c64b6",
+                            "parentId": "a307c92a-5a4f-89a1-c2f9-ee741d76eeea",
+                            "payload": {
+                              "entity_id": 17087,
+                              "tile_index": 0,
+                              "tile_length": 1,
+                              "tile_name": "Email - 2X Promo CTA Button - Generic",
+                              "tile_source": "Campaign"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "viewEvent": {
+                  "__typename": "ViewEvent",
+                  "eventName": "View Topic",
+                  "holisticEventName": "Topic Viewed",
+                  "payloadId": "a307c92a-5a4f-89a1-c2f9-ee741d76eeea",
+                  "holisticEventSchemaId": 671
+                },
+                "scrollEvent": {
+                  "__typename": "ScrollEvent",
+                  "eventName": "Scroll Topic",
+                  "holisticEventName": "Topic Scrolled",
+                  "payloadId": "a307c92a-5a4f-89a1-c2f9-ee741d76eeea",
+                  "holisticEventSchemaId": 671
+                },
+                "actionEvents": [],
+                "payloads": [
+                  {
+                    "__typename": "Payload",
+                    "id": "a307c92a-5a4f-89a1-c2f9-ee741d76eeea",
+                    "parentId": "7810c596-c99c-0fcf-4693-40bb8f733922",
+                    "payload": {
+                      "campaign_id": 13749,
+                      "campaign_name": "Email - Promo CTA",
+                      "curation_type": "Manual",
+                      "entity_array_id": [
+                        17087
+                      ],
+                      "entity_array_name": [
+                        "Email - 2X Promo CTA Button - Generic"
+                      ],
+                      "entity_type": "Media",
+                      "see_all": false,
+                      "topic_id": 57071,
+                      "topic_index": 0,
+                      "topic_length": 4,
+                      "topic_name": "CTA Button - Generic",
+                      "topic_template": "GENERIC",
+                      "topic_variation": "Variation 1",
+                      "topic_variation_id": 57819
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "payloads": [
+          {
+            "__typename": "Payload",
+            "id": "7810c596-c99c-0fcf-4693-40bb8f733922",
+            "parentId": null,
+            "payload": {
+              "feed_name": "Email Promo Feed (ask Sundar to edit/modify) - Aug 2023",
+              "feed_slug": "email-promo-feed",
+              "feed_variation": "V1",
+              "target_set_group_ids": [
+                2,
+                55,
+                138,
+                1420,
+                3442,
+                4508,
+                4583,
+                4588,
+                4618,
+                4681,
+                4686,
+                4695,
+                4718,
+                4754,
+                4757,
+                4872,
+                4875,
+                4893,
+                4895,
+                4967,
+                4970,
+                4973,
+                4976,
+                4979,
+                4983,
+                4984,
+                5013,
+                5025,
+                5073,
+                5090,
+                5142,
+                5148,
+                5183,
+                5198,
+                5211,
+                5218,
+                5250,
+                5348,
+                5353,
+                5355,
+                5369,
+                5388,
+                5389,
+                5404,
+                5411,
+                5446,
+                5458
+              ]
+            }
+          }
+        ],
+        "groups": null
+      }
+    }
+  }
+}
