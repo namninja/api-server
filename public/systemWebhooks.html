@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Webhooks</title>
+</head>
+<body>
+    <h1>Webhook Payloads</h1>
+    <div id="payloads"></div>
+
+    <script>
+        function fetchPayloads() {
+            fetch('/api/webhooks')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const payloadsDiv = document.getElementById('payloads');
+                    payloadsDiv.innerHTML = ''; // Clear previous content
+                    data.forEach(payload => {
+                        const payloadElement = document.createElement('pre');
+                        payloadElement.textContent = JSON.stringify(payload, null, 2);
+                        payloadsDiv.appendChild(payloadElement);
+                    });
+                })
+                .catch(error => console.error('Error fetching payloads:', error));
+        }
+
+        // Auto-refresh every 5 seconds
+        setInterval(fetchPayloads, 5000);
+
+        // Fetch initial payloads on page load
+        fetchPayloads();
+    </script>
+</body>
+</html>
