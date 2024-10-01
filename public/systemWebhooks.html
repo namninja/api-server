@@ -10,65 +10,58 @@
     <div id="payloads"></div>
 
     <script>
-        // Function to manage local storage size and add new webhook
-        function addWebhookToLocalStorage(newWebhook) {
-            // Retrieve the current webhook data from local storage
-            let webhooks = JSON.parse(localStorage.getItem('webhooks')) || [];
+        const LOCAL_STORAGE_KEY = 'webhookPayloads'; // Key for local storage
+        const MAX_STORAGE_SIZE = 4.5 * 1024 * 1024; // 4.5MB limit
 
-            // Add new webhook to the beginning of the array (most recent first)
-            webhooks.unshift(newWebhook);
-
-            // Estimate the size of the webhooks array (rough approximation)
-            let currentSize = new Blob([JSON.stringify(webhooks)]).size;
-
-            // Maximum size limit for Local Storage (5MB)
-            const maxSize = 5 * 1024 * 1024;
-
-            // Remove the oldest webhook if we exceed the size limit
-            while (currentSize > maxSize) {
-                webhooks.pop(); // Remove the oldest webhook
-                currentSize = new Blob([JSON.stringify(webhooks)]).size;
-            }
-
-            // Save the updated webhooks array back to Local Storage
-            localStorage.setItem('webhooks', JSON.stringify(webhooks));
-        }
-
-        // Function to fetch webhooks from the API and store them in local storage
+        // Function to fetch and display existing payloads from local storage
         function fetchPayloads() {
-            fetch('/api/webhooks')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Add each payload to local storage
-                    data.forEach(payload => addWebhookToLocalStorage(payload));
-                    // Display the payloads from local storage
-                    displayPayloads();
-                })
-                .catch(error => console.error('Error fetching payloads:', error));
-        }
-
-        // Function to display the payloads stored in Local Storage
-        function displayPayloads() {
-            const webhooks = JSON.parse(localStorage.getItem('webhooks')) || [];
             const payloadsDiv = document.getElementById('payloads');
+            const storedPayloads = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
+
             payloadsDiv.innerHTML = ''; // Clear previous content
-            webhooks.forEach(payload => {
+            storedPayloads.forEach(payload => {
                 const payloadElement = document.createElement('pre');
                 payloadElement.textContent = JSON.stringify(payload, null, 2);
                 payloadsDiv.appendChild(payloadElement);
             });
         }
 
-        // Auto-refresh every 5 seconds
-        setInterval(fetchPayloads, 5000);
+        // Function to write new payload to local storage
+        function writePayloadToLocalStorage(newPayload) {
+            let storedPayloads = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
+
+            // Add new payload to the array
+            storedPayloads.unshift(newPayload);
+
+            // Check for size limit and remove the oldest entries if necessary
+            while (JSON.stringify(storedPayloads).length > MAX_STORAGE_SIZE) {
+                storedPayloads.pop(); // Remove the oldest payloads
+            }
+
+            // Save back to local storage
+            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(storedPayloads));
+        }
+
+        // Function to listen for new webhook events
+        function listenForWebhooks() {
+            const eventSource = new EventSource('/events');
+            eventSource.onmessage = (event) => {
+                const payload = JSON.parse(event.data);
+                
+                // Write the new payload to local storage
+                writePayloadToLocalStorage(payload);
+
+                // Create a new element for the new payload
+                const payloadsDiv = document.getElementById('payloads');
+                const payloadElement = document.createElement('pre');
+                payloadElement.textContent = JSON.stringify(payload, null, 2);
+                payloadsDiv.prepend(payloadElement); // Add new payload to the top
+            };
+        }
 
         // Fetch initial payloads on page load
         fetchPayloads();
+        listenForWebhooks(); // Start listening for new webhooks
     </script>
 </body>
 </html>
