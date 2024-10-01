@@ -10,6 +10,31 @@
     <div id="payloads"></div>
 
     <script>
+        // Function to manage local storage size and add new webhook
+        function addWebhookToLocalStorage(newWebhook) {
+            // Retrieve the current webhook data from local storage
+            let webhooks = JSON.parse(localStorage.getItem('webhooks')) || [];
+
+            // Add new webhook to the beginning of the array (most recent first)
+            webhooks.unshift(newWebhook);
+
+            // Estimate the size of the webhooks array (rough approximation)
+            let currentSize = new Blob([JSON.stringify(webhooks)]).size;
+
+            // Maximum size limit for Local Storage (5MB)
+            const maxSize = 5 * 1024 * 1024;
+
+            // Remove the oldest webhook if we exceed the size limit
+            while (currentSize > maxSize) {
+                webhooks.pop(); // Remove the oldest webhook
+                currentSize = new Blob([JSON.stringify(webhooks)]).size;
+            }
+
+            // Save the updated webhooks array back to Local Storage
+            localStorage.setItem('webhooks', JSON.stringify(webhooks));
+        }
+
+        // Function to fetch webhooks from the API and store them in local storage
         function fetchPayloads() {
             fetch('/api/webhooks')
                 .then(response => {
@@ -19,15 +44,24 @@
                     return response.json();
                 })
                 .then(data => {
-                    const payloadsDiv = document.getElementById('payloads');
-                    payloadsDiv.innerHTML = ''; // Clear previous content
-                    data.forEach(payload => {
-                        const payloadElement = document.createElement('pre');
-                        payloadElement.textContent = JSON.stringify(payload, null, 2);
-                        payloadsDiv.appendChild(payloadElement);
-                    });
+                    // Add each payload to local storage
+                    data.forEach(payload => addWebhookToLocalStorage(payload));
+                    // Display the payloads from local storage
+                    displayPayloads();
                 })
                 .catch(error => console.error('Error fetching payloads:', error));
+        }
+
+        // Function to display the payloads stored in Local Storage
+        function displayPayloads() {
+            const webhooks = JSON.parse(localStorage.getItem('webhooks')) || [];
+            const payloadsDiv = document.getElementById('payloads');
+            payloadsDiv.innerHTML = ''; // Clear previous content
+            webhooks.forEach(payload => {
+                const payloadElement = document.createElement('pre');
+                payloadElement.textContent = JSON.stringify(payload, null, 2);
+                payloadsDiv.appendChild(payloadElement);
+            });
         }
 
         // Auto-refresh every 5 seconds

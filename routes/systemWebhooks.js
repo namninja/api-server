@@ -1,7 +1,7 @@
 const path = require('path');
 
 const systemWebhooksRoutes = (app, fs) => {
-  // Array to store webhook payloads
+  // Array to store webhook payloads temporarily (this will be replaced with client-side storage)
   let webhooks = [];
 
   // POST route to receive and store webhook payloads
