@@ -14,7 +14,6 @@ const mobileJwtRoutes = require('./mobilejwt');
 const programRoutes = require('./programs');
 const testFeedRoutes = require('./testfeed');
 
-
 const appRouter = (app, fs) => {
   // Default route
   app.get('/', (req, res) => {
@@ -22,7 +21,6 @@ const appRouter = (app, fs) => {
   });
 
   app.use(express.static('public')); // Serve static files, including systemWebhooks.html
-
 
   // Wire up the routes
   userRoutes(app, fs);
@@ -40,5 +38,4 @@ const appRouter = (app, fs) => {
   testFeedRoutes(app, fs);
   
 };
-
 module.exports = appRouter;
