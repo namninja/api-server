@@ -10,7 +10,7 @@ const jwtRoutes = (app, fs) => {
             exp: Math.floor(Date.now() / 1000) + 31536000,
             iat: Math.floor(Date.now() / 1000), 
             email: req.body.email
-        }, "8bc52bc88ed097d4bbe28e54d58a35b7fe1d4531a9d1c2273fa0302a5e903674470364107cf878d80984d919d38814f0f0b0e6e04709858213ff8cfd6af0c0f9");
+        }, "cbe2c828bafc6bdea63ecc5784bd7c152b47da01af3bce280f23539f00bb56d6408c6f672abce383c20fa05e3d9129ced3c80845760a3ef9b72a8af2ab5f91a9");
   
         res.status(201).json(token);
       });
