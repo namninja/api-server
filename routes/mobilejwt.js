@@ -12,7 +12,7 @@ const mobileJwtRoutes = (app, fs) => {
             exp: time + 600,
             iat: time, 
             email: req.body.email
-        }, "8bc52bc88ed097d4bbe28e54d58a35b7fe1d4531a9d1c2273fa0302a5e903674470364107cf878d80984d919d38814f0f0b0e6e04709858213ff8cfd6af0c0f9");
+        }, "0c811daa22858cdeb52eda1b7a0a1f3a5c1a8f5566a398869844504bf1a16f4043909c71cfad40790e0c971d04f5abb037c793cb11ffa2bff7b45da1dfdd4526");
   
         res.status(201).json(token);
         //res.status(201).json({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTMyNTQ0MzEsImVtYWlsIjoibmFtLm5nbytkcm9pZDRAaXRlcmFibGUuY29tIiwiaWF0IjoxNjg3OTgyMjA3fQ.YHOu1fweJI1F3OhA_tLQewxuSG5-Qv2O7iIhyTkSV-g"})
