@@ -1,17 +1,24 @@
-// ./routes/trashpanda.js
+const { TRASHPANDA_API_KEY } = require('../config');
+
 const trashpandaRoutes = (app, fs) => {
   app.post('/trashpanda', (req, res) => {
+    const apiKey = req.headers['x-api-key'];
+
+    // Check if the API key is present and valid
+    if (apiKey !== TRASHPANDA_API_KEY) {
+      console.warn("🛑 Unauthorized access attempt to /trashpanda");
+      return res.status(401).send({ error: 'Unauthorized' });
+    }
+
     console.log("📬 Incoming Webhook Payload:");
     console.log(JSON.stringify(req.body, null, 2));
 
-    // Append to log file
     fs.appendFile('./data/webhook-log.json', JSON.stringify(req.body) + '\n', err => {
       if (err) {
         console.error("❌ Failed to log webhook payload:", err);
       }
     });
 
-    // Return 200 OK
     res.status(200).send({ status: 'received' });
   });
 };
