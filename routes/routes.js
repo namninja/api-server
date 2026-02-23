@@ -4,6 +4,7 @@ const userRoutes = require('./users');
 const jobRoutes = require('./jobs');
 const commentRoutes = require('./comments');
 const postRoutes = require('./posts');
+const postRoutesSensitive = require('./posts-sensitive');
 const todoRoutes = require('./todos');
 const photoRoutes = require('./photos');
 const albumRoutes = require('./albums');
@@ -18,7 +19,7 @@ const trashpandaRoutes = require('./trashpanda');
 const appRouter = (app, fs) => {
   // Default route
   app.get('/', (req, res) => {
-    res.send('welcome to the development api-server. Here are the following routes: users, comments, products, todos, photos, albums, posts');
+    res.send('welcome to the development api-server. Here are the following routes: users, comments, products, todos, photos, albums, posts, posts-sensitive');
   });
 
   app.use(express.static('public')); // Serve static files, including systemWebhooks.html
@@ -27,6 +28,7 @@ const appRouter = (app, fs) => {
   userRoutes(app, fs);
   commentRoutes(app, fs);
   postRoutes(app, fs);
+  postRoutesSensitive(app, fs);
   todoRoutes(app, fs);
   photoRoutes(app, fs);
   albumRoutes(app, fs);
