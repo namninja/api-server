@@ -15,6 +15,7 @@ const mobileJwtRoutes = require('./mobilejwt');
 const programRoutes = require('./programs');
 const testFeedRoutes = require('./testfeed');
 const trashpandaRoutes = require('./trashpanda');
+const oauthRoutes = require('./oauth');
 
 const appRouter = (app, fs) => {
   // Default route
@@ -40,5 +41,6 @@ const appRouter = (app, fs) => {
   mobileJwtRoutes(app, fs);
   testFeedRoutes(app, fs);
   trashpandaRoutes(app, fs);
+  oauthRoutes(app, fs);
 };
 module.exports = appRouter;
