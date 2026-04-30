@@ -103,7 +103,7 @@ const bounceValidationRoutes = (app) => {
     const { email } = req.query;
 
     if (!email) {
-      return res.status(400).json({
+      return res.status(200).json({
         valid: false,
         email: 'missing',
         tld: 'missing',
