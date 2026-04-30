@@ -105,7 +105,11 @@ const bounceValidationRoutes = (app) => {
     if (!email) {
       return res.status(400).json({
         valid: false,
-        reason: 'Missing required query parameter: email'
+        email: 'missing',
+        tld: 'missing',
+        domain: 'missing',
+        reason: 'Missing required query parameter: email',
+        suggestion: 'missing'
       });
     }
 
